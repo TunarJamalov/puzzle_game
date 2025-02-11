@@ -1,0 +1,103 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#menu {
+  position: relative;
+  list-style-type: none;
+  padding: 15px;
+  margin: 10px;
+  z-index: 1000;
+  display: inline-block;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#menu li {
+  margin: 8px 0;
+  padding: 8px 15px;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+#menu li:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+}
+
+#menu a {
+  background-color: #4a90e2;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 8px 15px;
+  border-radius: 8px;
+  margin: 8px 0;
+  transition: all 0.3s ease;
+}
+
+#menu a:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+}
+
+#menu select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+#forPuzzle {
+  position: absolute;
+  width: 95vw;
+  height: 95vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  -webkit-user-drag: none;
+}
+
+.polypiece {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  transition: transform 0.2s ease;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.polypiece:hover {
+  transform: scale(1.02);
+}
+
+.moving {
+  transition-property: top, left;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.gameCanvas {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  -webkit-user-drag: none;
+}
